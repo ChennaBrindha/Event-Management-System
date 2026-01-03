@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Events</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="box">
+        <h2>Available Events</h2>
+        <ul>
+            {% for event_id, event in events.items() %}
+                <li>{{ event_id }}: {{ event['name'] }} on {{ event['date'] }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('user_dashboard') }}"><button>Back</button></a>
+    </div>
+</body>
+</html>

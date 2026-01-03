@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="box">
+        <h2>User Dashboard</h2>
+
+        <a href="{{ url_for('view_events') }}"><button>View Events</button></a>
+        <a href="{{ url_for('register_event') }}"><button>Register for Event</button></a>
+        <a href="/"><button>Logout</button></a>
+    </div>
+</body>
+</html>
